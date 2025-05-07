@@ -1,0 +1,261 @@
+*{
+    max-width: 1920px;
+    max-height: 2040px;
+}
+
+body {
+    header {
+      .headerTitleIcons {
+        display: flex; // Alinear título e íconos horizontalmente
+        justify-content: space-between; // Espacio entre título e íconos
+        align-items: center; // Centrado vertical
+        padding-left: 60px;
+        padding-right: 60px;
+  
+        .headerTitle {
+          font-family: 'Roboto', sans-serif; // Fuente personalizada
+          font-size: 20px;
+          color: #000;
+          margin: 0; // Elimina márgenes predeterminados
+        }
+  
+        .headerIcons {
+          display: flex; // Coloca los íconos en una fila
+          gap: 35px; // Espaciado entre íconos
+  
+          img {
+            width: 24px; // Tamaño de los íconos
+            height: 24px;
+            cursor: pointer; // Añade un puntero para íconos interactivos
+            transition: transform 0.2s ease; // Animación suave
+  
+            &:hover {
+              transform: scale(1.1); // Agranda un poco el ícono al pasar el mouse
+            }
+          }
+        }
+      }
+
+      .headerNav {
+        border-top: 1px solid #000; // Línea superior
+        border-bottom: 1px solid #000; // Línea inferior
+        padding: 25px 0;
+        max-width: 1250px; // Longitud fija de las líneas
+        margin: 0 auto; // Centrar todo el contenedor
+        display: flex;
+        justify-content: center; // Centrar contenido horizontalmente dentro del contenedor
+        align-items: center; // Centrar contenido verticalmente
+  
+        nav {
+          ul {
+            list-style: none; // Quitar puntos de lista
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 60px; // Espaciado entre elementos
+  
+            li {
+              a {
+                text-decoration: none;
+                color: #000;
+                font-family: 'Roboto';
+                font-size: 14px;
+                font-weight: bold; // Negrita para que coincida con el estilo
+                text-transform: uppercase; // Letras mayúsculas
+                transition: color 0.3s ease;
+  
+                &:hover {
+                  font-size: 16px; // Color al pasar el mouse
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+    main{
+        .centeredTitle{
+          text-align: center;
+          padding: 25px;
+          p{
+            font-family: 'roboto';
+            font-size: 18px;
+          }
+        }
+
+        
+        .shoppingBagTitle{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+            h2{
+                font-family: 'roboto';
+                font-size: 34px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+         }
+         
+         .contenedor{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .contenedorProductos{
+            justify-content: center;
+            align-items: center;
+            }
+            .producto{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin: 10px, auto, 0, auto;
+            }
+         }
+
+         .total{
+            border-bottom: 1px solid #000;
+            h3{
+                font-family: 'roboto';
+                font-size: 24px;
+            }
+         }
+
+         .precioTotal{
+            p{
+                font-family: 'roboto';
+                font-size: 24px;
+                font-weight: bold;
+            }
+         }
+
+         .contenedorProductosSugeridos{
+            h3{
+                font-family: 'roboto';
+                font-size: 24px;
+                font-weight: bold;
+                margin-left: 20px auto;
+            }
+
+            .productosSugeridos{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                margin: 10px, auto, 0, auto;
+                gap: 150px;
+                .productoSugerido{
+                    p{
+                        font-family: 'roboto';
+                        font-size: 18px;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+         }
+    }
+
+    footer {
+        background-color: #000;
+        .urbanOutfitersFooter {
+            background-color: #323334;
+            padding-left: 40px;
+            max-height: 100%;
+            max-width: 100%;
+            display: flex;
+            gap: 200px;
+
+          .firstRow {
+            h2 {
+              font-family: 'roboto';
+              font-size: 28px;
+              font-weight: bold;
+              color: white;
+            }
+            p {
+              font-family: 'roboto';
+              font-size: 16px;
+              color: white;
+            }
+            .socialMedia {
+              display: flex;
+              justify-content: left;
+              align-items: center;
+              gap: 20px;
+            }
+          }
+          .secondRow{
+            h3{
+                font-family: 'roboto';
+                font-size: 20px;
+                color: white;
+            }
+            p{
+                font-family: 'roboto';
+                font-size: 16px;
+                color: white;
+            }
+          }
+
+         .thirdRow{
+            h3{
+                font-family: 'roboto';
+                font-size: 20px;
+                color: white;
+            }
+            p{
+                font-family: 'roboto';
+                font-size: 16px;
+                color: white;
+            }
+          }
+          .fourthRow{
+            h3{
+                font-family: 'roboto';
+                font-size: 20px;
+                color: white;
+            }
+            .fromTheBlogContainer{
+                border-bottom: 1px solid white;
+                .entry{
+                    p{
+                        font-family: 'roboto';
+                        font-size: 16px;
+                        color: white;
+                    }
+                }
+            }
+            .fromTheBlogContainer2{
+                .entry{
+                    p{
+                        font-family: 'roboto';
+                        font-size: 16px;
+                        color: white;
+                    }
+                }
+            }
+          }
+         }
+        
+
+        .copyright{
+            background-color: #000;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            p{
+                font-family: 'Roboto';
+                font-size: 14px;
+                color: #fff;
+                text-align: center;;
+            }
+        }
+      }
+  }
+
+
+  

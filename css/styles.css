@@ -1,0 +1,206 @@
+* {
+  max-width: 1920px;
+  max-height: 2040px;
+}
+
+body header .headerTitleIcons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+body header .headerTitleIcons .headerTitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: #000;
+  margin: 0;
+}
+body header .headerTitleIcons .headerIcons {
+  display: flex;
+  gap: 35px;
+}
+body header .headerTitleIcons .headerIcons img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+body header .headerTitleIcons .headerIcons img:hover {
+  transform: scale(1.1);
+}
+body header .headerNav {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 25px 0;
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body header .headerNav nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 60px;
+}
+body header .headerNav nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+body header .headerNav nav ul li a:hover {
+  font-size: 16px;
+}
+body main .centeredTitle {
+  text-align: center;
+  padding: 25px;
+}
+body main .centeredTitle p {
+  font-family: "roboto";
+  font-size: 18px;
+}
+body main .shoppingBagTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+}
+body main .shoppingBagTitle h2 {
+  font-family: "roboto";
+  font-size: 34px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+body main .contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .contenedor .contenedorProductos {
+  justify-content: center;
+  align-items: center;
+}
+body main .contenedor .producto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 10px, auto, 0, auto;
+}
+body main .total {
+  border-bottom: 1px solid #000;
+}
+body main .total h3 {
+  font-family: "roboto";
+  font-size: 24px;
+}
+body main .precioTotal p {
+  font-family: "roboto";
+  font-size: 24px;
+  font-weight: bold;
+}
+body main .contenedorProductosSugeridos h3 {
+  font-family: "roboto";
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 20px auto;
+}
+body main .contenedorProductosSugeridos .productosSugeridos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 10px, auto, 0, auto;
+  gap: 150px;
+}
+body main .contenedorProductosSugeridos .productosSugeridos .productoSugerido p {
+  font-family: "roboto";
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+body footer {
+  background-color: #000;
+}
+body footer .urbanOutfitersFooter {
+  background-color: #323334;
+  padding-left: 40px;
+  max-height: 100%;
+  max-width: 100%;
+  display: flex;
+  gap: 200px;
+}
+body footer .urbanOutfitersFooter .firstRow h2 {
+  font-family: "roboto";
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+}
+body footer .urbanOutfitersFooter .firstRow p {
+  font-family: "roboto";
+  font-size: 16px;
+  color: white;
+}
+body footer .urbanOutfitersFooter .firstRow .socialMedia {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 20px;
+}
+body footer .urbanOutfitersFooter .secondRow h3 {
+  font-family: "roboto";
+  font-size: 20px;
+  color: white;
+}
+body footer .urbanOutfitersFooter .secondRow p {
+  font-family: "roboto";
+  font-size: 16px;
+  color: white;
+}
+body footer .urbanOutfitersFooter .thirdRow h3 {
+  font-family: "roboto";
+  font-size: 20px;
+  color: white;
+}
+body footer .urbanOutfitersFooter .thirdRow p {
+  font-family: "roboto";
+  font-size: 16px;
+  color: white;
+}
+body footer .urbanOutfitersFooter .fourthRow h3 {
+  font-family: "roboto";
+  font-size: 20px;
+  color: white;
+}
+body footer .urbanOutfitersFooter .fourthRow .fromTheBlogContainer {
+  border-bottom: 1px solid white;
+}
+body footer .urbanOutfitersFooter .fourthRow .fromTheBlogContainer .entry p {
+  font-family: "roboto";
+  font-size: 16px;
+  color: white;
+}
+body footer .urbanOutfitersFooter .fourthRow .fromTheBlogContainer2 .entry p {
+  font-family: "roboto";
+  font-size: 16px;
+  color: white;
+}
+body footer .copyright {
+  background-color: #000;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+body footer .copyright p {
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}/*# sourceMappingURL=styles.css.map */
