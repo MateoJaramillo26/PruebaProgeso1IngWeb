@@ -1,8 +1,8 @@
-* {
-  max-width: 1920px;
-  max-height: 2040px;
+body {
+  background: white;
+  margin: 0;
+  padding: 0;
 }
-
 body header .headerTitleIcons {
   display: flex;
   justify-content: space-between;
@@ -81,30 +81,158 @@ body main .shoppingBagTitle h2 {
 body main .contenedor {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  gap: 40px;
 }
 body main .contenedor .contenedorProductos {
+  min-width: 703.32px;
+  min-height: 180px;
   justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  gap: 40px;
 }
 body main .contenedor .producto {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 0px;
+  margin: 0;
+  border: none;
+}
+body main .contenedor .producto img {
+  min-width: 31px;
+  min-height: 31px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main .contenedor .producto .productName h3 {
+  font-family: "roboto";
+  font-size: 18px;
+  font-weight: bold;
+}
+body main .contenedor .producto .productName .productDetails {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+body main .contenedor .producto .productName .productDetails .productSizeTotal {
+  justify-content: center;
   align-items: center;
+}
+body main .contenedor .producto .productActions {
+  background-color: white;
+  display: flex;
+  min-width: 114px;
+  min-height: 31px;
+  gap: 10px;
+  justify-content: left;
+}
+body main .contenedor .producto .productActions button {
+  background-color: white;
+  border: 1px solid black;
+  min-width: 31px;
+}
+body main .contenedor .producto .productActions select {
+  min-width: 77px;
+  min-height: 31px;
+  background-color: white;
+  border: 1px solid black;
+}
+body main .contenedorDescuentos {
+  background-color: #ECEBE9;
+  max-width: 510px;
+  max-height: 507px;
   padding: 20px;
   margin: 10px, auto, 0, auto;
 }
+body main .contenedorDescuentos .descuentos {
+  font-family: "Roboto";
+}
+body main .contenedorDescuentos .discountCode {
+  display: flex;
+  max-width: 416px;
+  max-height: 54px;
+}
+body main .contenedorDescuentos .discountCode input {
+  flex: 1;
+  height: 48px;
+  background-color: white;
+  border: 1px solid #323334;
+  border-right: none;
+  border-radius: 0;
+  padding: 0 10px;
+  font-family: "Roboto";
+  font-size: 18px;
+  box-sizing: border-box;
+}
+body main .contenedorDescuentos .discountCode button {
+  width: 120px;
+  height: 48px;
+  background-color: #323334;
+  color: #fff;
+  border: 1px solid #323334;
+  border-radius: 0;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+}
+body main .contenedorDescuentos .discountCode button:hover {
+  background-color: #444;
+}
+body main .contenedorDescuentos .discountData {
+  display: inherit;
+}
+body main .contenedorDescuentos .discountData .orderValue {
+  display: flex;
+  justify-content: space-between;
+}
+body main .contenedorDescuentos .discountData .shipping {
+  display: flex;
+  justify-content: space-between;
+}
+body main .contenedorDescuentos .discountData .total {
+  display: flex;
+  justify-content: space-between;
+}
+body main .contenedorDescuentos .login {
+  width: 416px;
+  height: 50px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+body main .contenedorDescuentos .continueToCheckout {
+  width: 416px;
+  height: 50px;
+  background-color: #323334;
+  color: #fff;
+  font-family: "Roboto";
+}
 body main .total {
   border-bottom: 1px solid #000;
+  align-items: right;
+  text-align: right;
 }
 body main .total h3 {
   font-family: "roboto";
   font-size: 24px;
+  text-align: right;
 }
 body main .precioTotal p {
   font-family: "roboto";
   font-size: 24px;
   font-weight: bold;
+  text-align: right;
+}
+body main .contenedorProductosSugeridos {
+  margin: 120px;
 }
 body main .contenedorProductosSugeridos h3 {
   font-family: "roboto";
@@ -120,6 +248,10 @@ body main .contenedorProductosSugeridos .productosSugeridos {
   margin: 10px, auto, 0, auto;
   gap: 150px;
 }
+body main .contenedorProductosSugeridos .productosSugeridos .productoSugerido img {
+  min-height: 365px;
+  min-width: 306px;
+}
 body main .contenedorProductosSugeridos .productosSugeridos .productoSugerido p {
   font-family: "roboto";
   font-size: 18px;
@@ -127,7 +259,7 @@ body main .contenedorProductosSugeridos .productosSugeridos .productoSugerido p 
   text-transform: uppercase;
 }
 body footer {
-  background-color: #000;
+  background-color: #222222;
 }
 body footer .urbanOutfitersFooter {
   background-color: #323334;
@@ -193,10 +325,12 @@ body footer .urbanOutfitersFooter .fourthRow .fromTheBlogContainer2 .entry p {
   color: white;
 }
 body footer .copyright {
-  background-color: #000;
+  background-color: #222222;
   justify-content: center;
   align-items: center;
   text-align: center;
+  min-height: 52px;
+  min-width: 1440px;
 }
 body footer .copyright p {
   font-family: "Roboto";

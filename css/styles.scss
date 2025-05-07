@@ -1,9 +1,9 @@
-*{
-    max-width: 1920px;
-    max-height: 2040px;
-}
+
 
 body {
+  background: white;
+  margin: 0;
+  padding: 0;
     header {
       .headerTitleIcons {
         display: flex; // Alinear título e íconos horizontalmente
@@ -30,7 +30,7 @@ body {
             transition: transform 0.2s ease; // Animación suave
   
             &:hover {
-              transform: scale(1.1); // Agranda un poco el ícono al pasar el mouse
+              transform: scale(1.1);
             }
           }
         }
@@ -102,25 +102,162 @@ body {
          .contenedor{
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
+            gap: 40px;
+
             .contenedorProductos{
+            min-width: 703.32px;
+            min-height: 180px;
             justify-content: center;
-            align-items: center;
+            flex-direction: column;
+            gap: 40px;
+
             }
             .producto{
             display: flex;
             justify-content: center;
-            align-items: center;
-            padding: 20px;
-            margin: 10px, auto, 0, auto;
+            align-items: flex-start;
+            gap: 24px;;
+            padding: 0px;
+            margin: 0;
+            border: none;
+            img{
+              min-width: 31px;
+              min-height: 31px;
+              object-fit: cover;
+            }
+                .productName{
+                  h3{
+                     font-family: 'roboto';
+                     font-size: 18px;
+                     font-weight: bold;
+                  }
+
+                  .productDetails{
+                    display: flex;
+                    justify-content: center;
+                    gap: 40px;
+                    .productSizeTotal{
+                      
+                      justify-content: center;
+                      align-items: center;
+                    }
+                  }
+                }
+
+                .productActions{
+                  background-color: white;
+                  display: flex;
+                  min-width: 114px;
+                  min-height: 31px;
+                  gap: 10px;
+                  justify-content: left;
+                  button{
+                     background-color: white;
+                     border: 1px solid black;
+                     min-width: 31px;
+                  }
+                  select{
+                     min-width: 77px;
+                     min-height: 31px;
+                     background-color: white;
+                     border: 1px solid black;
+                  }
+
+                }
+            }
+
+         }
+
+         .contenedorDescuentos{
+          background-color: #ECEBE9;
+          max-width: 510px;
+          max-height: 507px;
+          padding: 20px;
+          margin: 10px, auto, 0, auto;
+            .descuentos{
+              font-family: 'Roboto';
+            }
+            
+            .discountCode{
+              display: flex;
+              max-width: 416px;
+              max-height: 54px;
+              input {
+                flex: 1;
+                height: 48px;
+                background-color: white;
+                border: 1px solid #323334;
+                border-right: none;
+                border-radius: 0;
+                padding: 0 10px;
+                font-family: 'Roboto';
+                font-size: 18px;
+                box-sizing: border-box;
+              }
+              button {
+                width: 120px;
+                height: 48px;
+                background-color: #323334;
+                color: #fff;
+                border: 1px solid #323334;
+                border-radius: 0;
+                font-family: 'Roboto';
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: background 0.2s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                letter-spacing: 1px;
+                &:hover {
+                  background-color: #444;
+                }
+              }
+            }
+            .discountData{
+              display: inherit;
+
+              .orderValue{
+                display: flex;
+                justify-content: space-between;
+              }
+              .shipping{
+                display: flex;
+                justify-content: space-between;
+              }
+              .total{
+                display: flex;
+                justify-content: space-between;
+              }
+            }
+
+            .login{
+              width: 416px;
+              height: 50px;
+              background-color: white;
+              color: black;
+              border: 1px solid black;
+            }
+            .continueToCheckout{
+                width: 416px;
+                height: 50px;
+                background-color: #323334;
+                color: #fff;
+                font-family: 'Roboto';
+
             }
          }
 
          .total{
             border-bottom: 1px solid #000;
+            align-items: right;
+            text-align: right;
             h3{
                 font-family: 'roboto';
                 font-size: 24px;
+                text-align: right;
             }
          }
 
@@ -129,10 +266,12 @@ body {
                 font-family: 'roboto';
                 font-size: 24px;
                 font-weight: bold;
+                text-align: right;
             }
          }
 
          .contenedorProductosSugeridos{
+          margin: 120px;
             h3{
                 font-family: 'roboto';
                 font-size: 24px;
@@ -148,6 +287,10 @@ body {
                 margin: 10px, auto, 0, auto;
                 gap: 150px;
                 .productoSugerido{
+                    img{
+                      min-height: 365px;
+                      min-width: 306px;
+                    }
                     p{
                         font-family: 'roboto';
                         font-size: 18px;
@@ -160,7 +303,7 @@ body {
     }
 
     footer {
-        background-color: #000;
+        background-color: #222222;
         .urbanOutfitersFooter {
             background-color: #323334;
             padding-left: 40px;
@@ -243,10 +386,12 @@ body {
         
 
         .copyright{
-            background-color: #000;
+            background-color: #222222;
             justify-content: center;
             align-items: center;
             text-align: center;
+            min-height: 52px;
+            min-width: 1440px;
             p{
                 font-family: 'Roboto';
                 font-size: 14px;

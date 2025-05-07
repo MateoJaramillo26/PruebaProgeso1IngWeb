@@ -52,65 +52,99 @@
         <div class="contenedor">
             <div class="contenedorProductos">
                 <div class="producto">
+                    
                     <img src="imgs/CheckeredDuvet.png" alt="Checked Duvet Cover Set">
-                    <div class="productDetails">
+                    <div class="productName">
                         <h3>Checked Duvet Cover Set</h3>
                         <h4>39.99 $</h4>
-                        <p>Art. No.: 54637253</p>
-                        <p>Color: Mint</p>
-                        <p>Size: 21x45</p>
-                        <p>Total: 39.99</p>
+                        <div class="productDetails">
+                            <div class="artColor">
+                                <p>Art. No.: 54637253</p>
+                                <p>Color: Mint</p>
+                            </div>
+                            
+                            <div class="productSizeTotal">
+                                <p>Size: 21x45</p>
+                                <p>Total: 39.99</p>
+                            </div>
+                          
+                        </div>
+                        <div class="productActions">
+                            <button><img src="icons/Heart.svg" alt="like"></button>
+                            <select>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="productActions">
-                        <button><img src="icons/Heart.svg" alt="like"></button>
-                        <select>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                    </div>
+
                 </div>
                 <div class="producto">
                     <img src="imgs/TasseledThrow.png" alt="Tasseled Throw">
-                    <div class="productDetails">
+                    <div class="productName">
                         <h3>Tasseled Throw</h3>
                         <h4>42.99 $</h4>
-                        <p>Art. No.: 54634364</p>
-                        <p>Color: Beige</p>
-                        <p>Size: 45x64</p>
-                        <p>Total: 42.99</p>
+                        <div class="productDetails">
+                            <div class="artColor">
+                                <p>Art. No.: 54634364</p>
+                                <p>Color: Beige</p>
+                            </div>
+                            <div class="productSizeTotal">
+                                <p>Size: 45x64</p>
+                                <p>Total: 42.99</p>
+                            </div>
+                        </div>
+                        <div class="productActions">
+                            <button><img src="icons/Heart.svg" alt="like"></button>
+                            <select>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="productActions">
-                        <button><img src="icons/Heart.svg" alt="like"></button>
-                        <select>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                    </div>
+
+
+                </div>
+                <div class="total">
+                    <h3>Total</h3>
+                </div>
+                <div class="precioTotal">
+                    <p>82.98 $</p>
                 </div>
             </div>
 
             <div class="contenedorDescuentos">
                 <div class="descuentos">
                     <h3>Add a Discount Code</h3>
-                    <input type="text" placeholder="Enter discount code">
-                    <button>Add</button>
+                    <div class="discountCode">
+                        <input type="text" placeholder="Enter discount code">
+                        <button>Add</button>
+                    </div>
+
                     <h3>Log in to use your member offers.</h3>
-                    <button>Log In</button>
-                    <p>Order value: 82.98 $</p>
-                    <p>Shipping: 0.0 $</p>
-                    <p>Total: 82.98 $</p>
-                    <button>Continue to Checkout</button>
+                    <button class="login">Log In</button>
+                    <div class = "discountData">
+                        <div class="orderValue">
+                            <p>Order value:</p>
+                            <p>82.98 $</p>
+                        </div>
+                        <div class="shipping">
+                            <p>Shipping:</p>
+                            <p>0.0 $</p>
+                        </div>
+                        <div class="total">
+                            <p>Total:</p>
+                            <p>82.98 $</p>
+                        </div>
+                    </div>
+
+                    <button class="continueToCheckout">Continue to Checkout</button>
                 </div>
             </div>
         </div>
-        <div class="total">
-            <h3>Total</h3>
-        </div>
-        <div class="precioTotal">
-            <p>82.98 $</p>
-        </div>
+
 
         <div class="contenedorProductosSugeridos">
             <h3>Also you may buy</h3>
