@@ -1,33 +1,33 @@
 
 
 body {
-  background: white;
+  background: white; // Asegúrate de que el fondo sea blanco
   margin: 0;
-  padding: 0;
+  font-family: monospace;
     header {
       .headerTitleIcons {
-        display: flex; // Alinear título e íconos horizontalmente
-        justify-content: space-between; // Espacio entre título e íconos
-        align-items: center; // Centrado vertical
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
         padding-left: 60px;
         padding-right: 60px;
   
         .headerTitle {
-          font-family: 'Roboto', sans-serif; // Fuente personalizada
+          font-family: 'Roboto', sans-serif; 
           font-size: 20px;
           color: #000;
-          margin: 0; // Elimina márgenes predeterminados
+          margin: 0; 
         }
   
         .headerIcons {
-          display: flex; // Coloca los íconos en una fila
-          gap: 35px; // Espaciado entre íconos
+          display: flex; 
+          gap: 35px; 
   
           img {
-            width: 24px; // Tamaño de los íconos
+            width: 24px; 
             height: 24px;
-            cursor: pointer; // Añade un puntero para íconos interactivos
-            transition: transform 0.2s ease; // Animación suave
+            cursor: pointer; 
+            transition: transform 0.2s ease; 
   
             &:hover {
               transform: scale(1.1);
@@ -37,22 +37,22 @@ body {
       }
 
       .headerNav {
-        border-top: 1px solid #000; // Línea superior
-        border-bottom: 1px solid #000; // Línea inferior
+        border-top: 1px solid #000; 
+        border-bottom: 1px solid #000; 
         padding: 25px 0;
-        max-width: 1250px; // Longitud fija de las líneas
-        margin: 0 auto; // Centrar todo el contenedor
+        max-width: 1250px; 
+        margin: 0 auto;
         display: flex;
-        justify-content: center; // Centrar contenido horizontalmente dentro del contenedor
-        align-items: center; // Centrar contenido verticalmente
+        justify-content: center; 
+        align-items: center; 
   
         nav {
           ul {
-            list-style: none; // Quitar puntos de lista
+            list-style: none; 
             padding: 0;
             margin: 0;
             display: flex;
-            gap: 60px; // Espaciado entre elementos
+            gap: 60px; 
   
             li {
               a {
@@ -60,12 +60,12 @@ body {
                 color: #000;
                 font-family: 'Roboto';
                 font-size: 14px;
-                font-weight: bold; // Negrita para que coincida con el estilo
-                text-transform: uppercase; // Letras mayúsculas
+                font-weight: bold; 
+                text-transform: uppercase;
                 transition: color 0.3s ease;
   
                 &:hover {
-                  font-size: 16px; // Color al pasar el mouse
+                  font-size: 16px; 
                 }
               }
             }
@@ -88,6 +88,7 @@ body {
         
         .shoppingBagTitle{
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
             padding: 0px;
@@ -121,6 +122,20 @@ body {
             padding: 0px;
             margin: 0;
             border: none;
+            .row > .column {
+              padding: 0 8px;
+            }
+            
+            .row:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+
+            .column {
+              float: left;
+              width: 25%;
+            }
             img{
               min-width: 31px;
               min-height: 31px;
@@ -132,13 +147,31 @@ body {
                      font-size: 18px;
                      font-weight: bold;
                   }
+                  h4{
+                     font-family: 'roboto';
+                     font-size: 16px;
+                     font-weight: bold;
+                  }
 
                   .productDetails{
                     display: flex;
                     justify-content: center;
                     gap: 40px;
+
+                    .artColor{
+                      p{
+                         font-family: 'roboto';
+                         font-size: 16px;
+                         font-weight: 0;
+                      }
+                    }
                     .productSizeTotal{
                       
+                      p{
+                         font-family: 'roboto';
+                         font-size: 16px;
+                         font-weight: 0;
+                      }
                       justify-content: center;
                       align-items: center;
                     }
@@ -169,6 +202,117 @@ body {
 
          }
 
+         
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
          .contenedorDescuentos{
           background-color: #ECEBE9;
           max-width: 510px;
@@ -177,6 +321,11 @@ body {
           margin: 10px, auto, 0, auto;
             .descuentos{
               font-family: 'Roboto';
+              h3{
+                font-family: 'roboto';
+                color: #323334;
+                font-weight: lighter;
+              }
             }
             
             .discountCode{
@@ -204,7 +353,7 @@ body {
                 border-radius: 0;
                 font-family: 'Roboto';
                 font-size: 16px;
-                font-weight: bold;
+                font-weight: bold; 
                 cursor: pointer;
                 transition: background 0.2s;
                 display: flex;
@@ -391,16 +540,539 @@ body {
             align-items: center;
             text-align: center;
             min-height: 52px;
-            min-width: 1440px;
+            width: 100%; // Cambiamos min-width por width
             p{
                 font-family: 'Roboto';
                 font-size: 14px;
                 color: #fff;
-                text-align: center;;
+                text-align: center;
+                padding: 15px 0;
             }
         }
       }
   }
 
 
+  @media (max-width: 900px) {
+    .headerNav {
+      max-width: 100%;
+      padding: 15px 0;
+      
+      nav ul {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+    }
+    
+    .contenedor { 
+      flex-direction: column; 
+      align-items: center; 
+      gap: 20px; 
+    }
+    
+    .contenedorDescuentos, 
+    .contenedorProductos { 
+      max-width: 100%; 
+      width: 100%;
+      min-width: auto;
+    }
+    
+    .producto {
+      width: 100%;
+      max-width: 100%;
+    }
+    
+    .producto img { 
+      max-width: 100px; 
+      max-height: 100px; 
+    }
+    
+    .contenedorProductosSugeridos {
+      margin: 60px 20px;
+    }
+    
+    .productosSugeridos {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    
+    .productoSugerido img {
+      min-height: auto;
+      min-width: auto;
+      max-width: 200px;
+      max-height: 200px;
+    }
+    
+    footer .urbanOutfitersFooter {
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 20px;
+    }
+    
+    footer .copyright {
+      min-width: 100%;
+    }
+  }
   
+  @media (max-width: 600px) {
+    .headerTitleIcons {
+      padding-left: 20px;
+      padding-right: 20px;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .headerNav nav ul {
+      gap: 10px;
+      
+      li a {
+        font-size: 12px;
+        
+        &:hover {
+          font-size: 14px;
+        }
+      }
+    }
+    
+    .contenedor {
+      padding: 0 10px;
+    }
+    .producto {
+      flex-direction: column;
+      align-items: center;
+    }
+    .producto img {
+      max-width: 80px;
+      max-height: 80px;
+    }
+    .contenedorDescuentos {
+      padding: 10px;
+    }
+    .login, .continueToCheckout {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+// Estilos del lightbox
+.modal {
+  display: none;
+
+  &:target {
+    display: block;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8); // Esto solo afecta el fondo del modal
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  h3 {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    margin: 15px 0;
+  }
+
+  .imagen {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      color: #fff;
+      font-size: 40px;
+      text-decoration: none;
+      margin: 0 10px;
+
+      &:nth-child(2) {
+        margin: 0;
+        height: 100%;
+        flex-shrink: 2;
+      }
+    }
+
+    img {
+      width: 500px;
+      height: 100%;
+      max-width: 100%;
+      border: 7px solid #fff;
+      box-sizing: border-box;
+    }
+  }
+
+  .cerrar {
+    display: block;
+    background: #fff;
+    width: 25px;
+    height: 25px;
+    margin: 15px auto;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000;
+    padding: 5px;
+    border-radius: 50%;
+    line-height: 25px;
+  }
+}
+
+         .contenedorDescuentos{
+          background-color: #ECEBE9;
+          max-width: 510px;
+          max-height: 507px;
+          padding: 20px;
+          margin: 10px, auto, 0, auto;
+            .descuentos{
+              font-family: 'Roboto';
+              h3{
+                font-family: 'roboto';
+                color: #323334;
+                font-weight: lighter;
+              }
+            }
+            
+            .discountCode{
+              display: flex;
+              max-width: 416px;
+              max-height: 54px;
+              input {
+                flex: 1;
+                height: 48px;
+                background-color: white;
+                border: 1px solid #323334;
+                border-right: none;
+                border-radius: 0;
+                padding: 0 10px;
+                font-family: 'Roboto';
+                font-size: 18px;
+                box-sizing: border-box;
+              }
+              button {
+                width: 120px;
+                height: 48px;
+                background-color: #323334;
+                color: #fff;
+                border: 1px solid #323334;
+                border-radius: 0;
+                font-family: 'Roboto';
+                font-size: 16px;
+                font-weight: bold; 
+                cursor: pointer;
+                transition: background 0.2s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                letter-spacing: 1px;
+                &:hover {
+                  background-color: #444;
+                }
+              }
+            }
+            .discountData{
+              display: inherit;
+
+              .orderValue{
+                display: flex;
+                justify-content: space-between;
+              }
+              .shipping{
+                display: flex;
+                justify-content: space-between;
+              }
+              .total{
+                display: flex;
+                justify-content: space-between;
+              }
+            }
+
+            .login{
+              width: 416px;
+              height: 50px;
+              background-color: white;
+              color: black;
+              border: 1px solid black;
+            }
+            .continueToCheckout{
+                width: 416px;
+                height: 50px;
+                background-color: #323334;
+                color: #fff;
+                font-family: 'Roboto';
+
+            }
+         }
+
+         .total{
+            border-bottom: 1px solid #000;
+            align-items: right;
+            text-align: right;
+            h3{
+                font-family: 'roboto';
+                font-size: 24px;
+                text-align: right;
+            }
+         }
+
+         .precioTotal{
+            p{
+                font-family: 'roboto';
+                font-size: 24px;
+                font-weight: bold;
+                text-align: right;
+            }
+         }
+
+         .contenedorProductosSugeridos{
+          margin: 120px;
+            h3{
+                font-family: 'roboto';
+                font-size: 24px;
+                font-weight: bold;
+                margin-left: 20px auto;
+            }
+
+            .productosSugeridos{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                margin: 10px, auto, 0, auto;
+                gap: 150px;
+                .productoSugerido{
+                    img{
+                      min-height: 365px;
+                      min-width: 306px;
+                    }
+                    p{
+                        font-family: 'roboto';
+                        font-size: 18px;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+         }
+    
+
+    footer {
+        background-color: #222222;
+        .urbanOutfitersFooter {
+            background-color: #323334;
+            padding-left: 40px;
+            max-height: 100%;
+            max-width: 100%;
+            display: flex;
+            gap: 200px;
+
+          .firstRow {
+            h2 {
+              font-family: 'roboto';
+              font-size: 28px;
+              font-weight: bold;
+              color: white;
+            }
+            p {
+              font-family: 'roboto';
+              font-size: 16px;
+              color: white;
+            }
+            .socialMedia {
+              display: flex;
+              justify-content: left;
+              align-items: center;
+              gap: 20px;
+            }
+          }
+          .secondRow{
+            h3{
+                font-family: 'roboto';
+                font-size: 20px;
+                color: white;
+            }
+            p{
+                font-family: 'roboto';
+                font-size: 16px;
+                color: white;
+            }
+          }
+
+         .thirdRow{
+            h3{
+                font-family: 'roboto';
+                font-size: 20px;
+                color: white;
+            }
+            p{
+                font-family: 'roboto';
+                font-size: 16px;
+                color: white;
+            }
+          }
+          .fourthRow{
+            h3{
+                font-family: 'roboto';
+                font-size: 20px;
+                color: white;
+            }
+            .fromTheBlogContainer{
+                border-bottom: 1px solid white;
+                .entry{
+                    p{
+                        font-family: 'roboto';
+                        font-size: 16px;
+                        color: white;
+                    }
+                }
+            }
+            .fromTheBlogContainer2{
+                .entry{
+                    p{
+                        font-family: 'roboto';
+                        font-size: 16px;
+                        color: white;
+                    }
+                }
+            }
+          }
+         }
+        
+
+        .copyright{
+            background-color: #222222;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 52px;
+            width: 100%; // Cambiamos min-width por width
+            p{
+                font-family: 'Roboto';
+                font-size: 14px;
+                color: #fff;
+                text-align: center;
+                padding: 15px 0;
+            }
+        }
+      }
+  
+
+
+  @media (max-width: 900px) {
+    .headerNav {
+      max-width: 100%;
+      padding: 15px 0;
+      
+      nav ul {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+    }
+    
+    .contenedor { 
+      flex-direction: column; 
+      align-items: center; 
+      gap: 20px;
+      width: 100%;
+    }
+    
+    .contenedorDescuentos, 
+    .contenedorProductos { 
+      max-width: 100%; 
+      width: 100%;
+      min-width: auto;
+      padding: 10px;
+    }
+    
+    .producto {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .total{
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid #000;
+      h3{
+        font-family: 'roboto';
+        font-size: 24px;
+        text-align: center;
+      }
+    }
+    
+    .producto img { 
+      max-width: 100px; 
+      max-height: 100px; 
+    }
+    
+    .contenedorProductosSugeridos {
+      margin: 60px 20px;
+    }
+    
+    .productosSugeridos {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    
+    .productoSugerido img {
+      min-height: auto;
+      min-width: auto;
+      max-width: 200px;
+      max-height: 200px;
+    }
+    
+    footer .urbanOutfitersFooter {
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 20px;
+    }
+    
+    footer .copyright {
+      min-width: 100%;
+    }
+  }
+  
+  @media (max-width: 760px) {
+    .headerTitleIcons {
+      padding-left: 20px;
+      padding-right: 20px;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .headerNav nav ul {
+      gap: 10px;
+      
+      li a {
+        font-size: 12px;
+        
+        &:hover {
+          font-size: 14px;
+        }
+      }
+    }
+    
+    .contenedor {
+      padding: 0 10px;
+    }
+    .producto {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .producto img {
+      max-width: 80px;
+      max-height: 80px;
+    }
+    .contenedorDescuentos {
+      padding: 10px;
+      width: 100%;
+    }
+    .login, .continueToCheckout {
+      width: 100%;
+      max-width: 100%;
+    }
+  }

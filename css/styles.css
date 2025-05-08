@@ -1,7 +1,7 @@
 body {
   background: white;
   margin: 0;
-  padding: 0;
+  font-family: monospace;
 }
 body header .headerTitleIcons {
   display: flex;
@@ -58,6 +58,17 @@ body header .headerNav nav ul li a {
 body header .headerNav nav ul li a:hover {
   font-size: 16px;
 }
+body main {
+  /* The Modal (background) */
+  /* Modal Content */
+  /* The Close Button */
+  /* Hide the slides by default */
+  /* Next & previous buttons */
+  /* Position the "next button" to the right */
+  /* On hover, add a black background color with a little bit see-through */
+  /* Number text (1/3 etc) */
+  /* Caption text */
+}
 body main .centeredTitle {
   text-align: center;
   padding: 25px;
@@ -68,6 +79,7 @@ body main .centeredTitle p {
 }
 body main .shoppingBagTitle {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding: 0px;
@@ -100,6 +112,18 @@ body main .contenedor .producto {
   margin: 0;
   border: none;
 }
+body main .contenedor .producto .row > .column {
+  padding: 0 8px;
+}
+body main .contenedor .producto .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body main .contenedor .producto .column {
+  float: left;
+  width: 25%;
+}
 body main .contenedor .producto img {
   min-width: 31px;
   min-height: 31px;
@@ -111,14 +135,29 @@ body main .contenedor .producto .productName h3 {
   font-size: 18px;
   font-weight: bold;
 }
+body main .contenedor .producto .productName h4 {
+  font-family: "roboto";
+  font-size: 16px;
+  font-weight: bold;
+}
 body main .contenedor .producto .productName .productDetails {
   display: flex;
   justify-content: center;
   gap: 40px;
 }
+body main .contenedor .producto .productName .productDetails .artColor p {
+  font-family: "roboto";
+  font-size: 16px;
+  font-weight: 0;
+}
 body main .contenedor .producto .productName .productDetails .productSizeTotal {
   justify-content: center;
   align-items: center;
+}
+body main .contenedor .producto .productName .productDetails .productSizeTotal p {
+  font-family: "roboto";
+  font-size: 16px;
+  font-weight: 0;
 }
 body main .contenedor .producto .productActions {
   background-color: white;
@@ -139,6 +178,94 @@ body main .contenedor .producto .productActions select {
   background-color: white;
   border: 1px solid black;
 }
+body main .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+body main .modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+body main .close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+body main .close:hover,
+body main .close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+body main .mySlides {
+  display: none;
+}
+body main .prev,
+body main .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+}
+body main .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+body main .prev:hover,
+body main .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+body main .numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+body main .caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+body main img.demo {
+  opacity: 0.6;
+}
+body main .active,
+body main .demo:hover {
+  opacity: 1;
+}
+body main img.hover-shadow {
+  transition: 0.3s;
+}
+body main .hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 body main .contenedorDescuentos {
   background-color: #ECEBE9;
   max-width: 510px;
@@ -148,6 +275,11 @@ body main .contenedorDescuentos {
 }
 body main .contenedorDescuentos .descuentos {
   font-family: "Roboto";
+}
+body main .contenedorDescuentos .descuentos h3 {
+  font-family: "roboto";
+  color: #323334;
+  font-weight: lighter;
 }
 body main .contenedorDescuentos .discountCode {
   display: flex;
@@ -330,11 +462,467 @@ body footer .copyright {
   align-items: center;
   text-align: center;
   min-height: 52px;
-  min-width: 1440px;
+  width: 100%;
 }
 body footer .copyright p {
   font-family: "Roboto";
   font-size: 14px;
   color: #fff;
   text-align: center;
+  padding: 15px 0;
+}
+
+@media (max-width: 900px) {
+  .headerNav {
+    max-width: 100%;
+    padding: 15px 0;
+  }
+  .headerNav nav ul {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .contenedor {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .contenedorDescuentos,
+  .contenedorProductos {
+    max-width: 100%;
+    width: 100%;
+    min-width: auto;
+  }
+  .producto {
+    width: 100%;
+    max-width: 100%;
+  }
+  .producto img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+  .contenedorProductosSugeridos {
+    margin: 60px 20px;
+  }
+  .productosSugeridos {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .productoSugerido img {
+    min-height: auto;
+    min-width: auto;
+    max-width: 200px;
+    max-height: 200px;
+  }
+  footer .urbanOutfitersFooter {
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
+  }
+  footer .copyright {
+    min-width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .headerTitleIcons {
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .headerNav nav ul {
+    gap: 10px;
+  }
+  .headerNav nav ul li a {
+    font-size: 12px;
+  }
+  .headerNav nav ul li a:hover {
+    font-size: 14px;
+  }
+  .contenedor {
+    padding: 0 10px;
+  }
+  .producto {
+    flex-direction: column;
+    align-items: center;
+  }
+  .producto img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+  .contenedorDescuentos {
+    padding: 10px;
+  }
+  .login, .continueToCheckout {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.modal {
+  display: none;
+}
+.modal:target {
+  display: block;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.modal h3 {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  margin: 15px 0;
+}
+.modal .imagen {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal .imagen a {
+  color: #fff;
+  font-size: 40px;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.modal .imagen a:nth-child(2) {
+  margin: 0;
+  height: 100%;
+  flex-shrink: 2;
+}
+.modal .imagen img {
+  width: 500px;
+  height: 100%;
+  max-width: 100%;
+  border: 7px solid #fff;
+  box-sizing: border-box;
+}
+.modal .cerrar {
+  display: block;
+  background: #fff;
+  width: 25px;
+  height: 25px;
+  margin: 15px auto;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000;
+  padding: 5px;
+  border-radius: 50%;
+  line-height: 25px;
+}
+
+.contenedorDescuentos {
+  background-color: #ECEBE9;
+  max-width: 510px;
+  max-height: 507px;
+  padding: 20px;
+  margin: 10px, auto, 0, auto;
+}
+.contenedorDescuentos .descuentos {
+  font-family: "Roboto";
+}
+.contenedorDescuentos .descuentos h3 {
+  font-family: "roboto";
+  color: #323334;
+  font-weight: lighter;
+}
+.contenedorDescuentos .discountCode {
+  display: flex;
+  max-width: 416px;
+  max-height: 54px;
+}
+.contenedorDescuentos .discountCode input {
+  flex: 1;
+  height: 48px;
+  background-color: white;
+  border: 1px solid #323334;
+  border-right: none;
+  border-radius: 0;
+  padding: 0 10px;
+  font-family: "Roboto";
+  font-size: 18px;
+  box-sizing: border-box;
+}
+.contenedorDescuentos .discountCode button {
+  width: 120px;
+  height: 48px;
+  background-color: #323334;
+  color: #fff;
+  border: 1px solid #323334;
+  border-radius: 0;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+}
+.contenedorDescuentos .discountCode button:hover {
+  background-color: #444;
+}
+.contenedorDescuentos .discountData {
+  display: inherit;
+}
+.contenedorDescuentos .discountData .orderValue {
+  display: flex;
+  justify-content: space-between;
+}
+.contenedorDescuentos .discountData .shipping {
+  display: flex;
+  justify-content: space-between;
+}
+.contenedorDescuentos .discountData .total {
+  display: flex;
+  justify-content: space-between;
+}
+.contenedorDescuentos .login {
+  width: 416px;
+  height: 50px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+.contenedorDescuentos .continueToCheckout {
+  width: 416px;
+  height: 50px;
+  background-color: #323334;
+  color: #fff;
+  font-family: "Roboto";
+}
+
+.total {
+  border-bottom: 1px solid #000;
+  align-items: right;
+  text-align: right;
+}
+.total h3 {
+  font-family: "roboto";
+  font-size: 24px;
+  text-align: right;
+}
+
+.precioTotal p {
+  font-family: "roboto";
+  font-size: 24px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.contenedorProductosSugeridos {
+  margin: 120px;
+}
+.contenedorProductosSugeridos h3 {
+  font-family: "roboto";
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 20px auto;
+}
+.contenedorProductosSugeridos .productosSugeridos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 10px, auto, 0, auto;
+  gap: 150px;
+}
+.contenedorProductosSugeridos .productosSugeridos .productoSugerido img {
+  min-height: 365px;
+  min-width: 306px;
+}
+.contenedorProductosSugeridos .productosSugeridos .productoSugerido p {
+  font-family: "roboto";
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+footer {
+  background-color: #222222;
+}
+footer .urbanOutfitersFooter {
+  background-color: #323334;
+  padding-left: 40px;
+  max-height: 100%;
+  max-width: 100%;
+  display: flex;
+  gap: 200px;
+}
+footer .urbanOutfitersFooter .firstRow h2 {
+  font-family: "roboto";
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+}
+footer .urbanOutfitersFooter .firstRow p {
+  font-family: "roboto";
+  font-size: 16px;
+  color: white;
+}
+footer .urbanOutfitersFooter .firstRow .socialMedia {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 20px;
+}
+footer .urbanOutfitersFooter .secondRow h3 {
+  font-family: "roboto";
+  font-size: 20px;
+  color: white;
+}
+footer .urbanOutfitersFooter .secondRow p {
+  font-family: "roboto";
+  font-size: 16px;
+  color: white;
+}
+footer .urbanOutfitersFooter .thirdRow h3 {
+  font-family: "roboto";
+  font-size: 20px;
+  color: white;
+}
+footer .urbanOutfitersFooter .thirdRow p {
+  font-family: "roboto";
+  font-size: 16px;
+  color: white;
+}
+footer .urbanOutfitersFooter .fourthRow h3 {
+  font-family: "roboto";
+  font-size: 20px;
+  color: white;
+}
+footer .urbanOutfitersFooter .fourthRow .fromTheBlogContainer {
+  border-bottom: 1px solid white;
+}
+footer .urbanOutfitersFooter .fourthRow .fromTheBlogContainer .entry p {
+  font-family: "roboto";
+  font-size: 16px;
+  color: white;
+}
+footer .urbanOutfitersFooter .fourthRow .fromTheBlogContainer2 .entry p {
+  font-family: "roboto";
+  font-size: 16px;
+  color: white;
+}
+footer .copyright {
+  background-color: #222222;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 52px;
+  width: 100%;
+}
+footer .copyright p {
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+}
+
+@media (max-width: 900px) {
+  .headerNav {
+    max-width: 100%;
+    padding: 15px 0;
+  }
+  .headerNav nav ul {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .contenedor {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+  .contenedorDescuentos,
+  .contenedorProductos {
+    max-width: 100%;
+    width: 100%;
+    min-width: auto;
+    padding: 10px;
+  }
+  .producto {
+    width: 100%;
+    max-width: 100%;
+  }
+  .total {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #000;
+  }
+  .total h3 {
+    font-family: "roboto";
+    font-size: 24px;
+    text-align: center;
+  }
+  .producto img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+  .contenedorProductosSugeridos {
+    margin: 60px 20px;
+  }
+  .productosSugeridos {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .productoSugerido img {
+    min-height: auto;
+    min-width: auto;
+    max-width: 200px;
+    max-height: 200px;
+  }
+  footer .urbanOutfitersFooter {
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
+  }
+  footer .copyright {
+    min-width: 100%;
+  }
+}
+@media (max-width: 760px) {
+  .headerTitleIcons {
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .headerNav nav ul {
+    gap: 10px;
+  }
+  .headerNav nav ul li a {
+    font-size: 12px;
+  }
+  .headerNav nav ul li a:hover {
+    font-size: 14px;
+  }
+  .contenedor {
+    padding: 0 10px;
+  }
+  .producto {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .producto img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+  .contenedorDescuentos {
+    padding: 10px;
+    width: 100%;
+  }
+  .login, .continueToCheckout {
+    width: 100%;
+    max-width: 100%;
+  }
 }/*# sourceMappingURL=styles.css.map */

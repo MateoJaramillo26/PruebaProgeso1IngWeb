@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moody Studio</title>
 </head>
 <body>
@@ -52,8 +53,7 @@
         <div class="contenedor">
             <div class="contenedorProductos">
                 <div class="producto">
-                    
-                    <img src="imgs/CheckeredDuvet.png" alt="Checked Duvet Cover Set">
+                    <a href="#img1"><img src="imgs/CheckeredDuvet.png" alt="Checked Duvet Cover Set"></a>
                     <div class="productName">
                         <h3>Checked Duvet Cover Set</h3>
                         <h4>39.99 $</h4>
@@ -78,10 +78,9 @@
                             </select>
                         </div>
                     </div>
-
                 </div>
                 <div class="producto">
-                    <img src="imgs/TasseledThrow.png" alt="Tasseled Throw">
+                    <a href="#img2"><img src="imgs/TasseledThrow.png" alt="Tasseled Throw"></a>
                     <div class="productName">
                         <h3>Tasseled Throw</h3>
                         <h4>42.99 $</h4>
@@ -104,8 +103,6 @@
                             </select>
                         </div>
                     </div>
-
-
                 </div>
                 <div class="total">
                     <h3>Total</h3>
@@ -117,10 +114,10 @@
 
             <div class="contenedorDescuentos">
                 <div class="descuentos">
-                    <h3>Add a Discount Code</h3>
+                    <h3>ADD A DISCOUNT CODE</h3>
                     <div class="discountCode">
                         <input type="text" placeholder="Enter discount code">
-                        <button>Add</button>
+                        <button>ADD</button>    
                     </div>
 
                     <h3>Log in to use your member offers.</h3>
@@ -145,6 +142,27 @@
             </div>
         </div>
 
+        <!-- Lightbox Modals -->
+        <div class="modal" id="img1">
+            <h3>Checked Duvet Cover Set</h3>
+            <div class="imagen">
+                <a href="#img2">&#60;</a>
+                <a href="#img2"><img src="imgs/CheckeredDuvet.png" alt="Checked Duvet Cover Set"></a>
+                <a href="#img2">></a>
+            </div>
+            <a class="cerrar" href="">X</a>
+        </div>
+        
+        <div class="modal" id="img2">
+            <h3>Tasseled Throw</h3>
+            <div class="imagen">
+                <a href="#img1">&#60;</a>
+                <a href="#img1"><img src="imgs/TasseledThrow.png" alt="Tasseled Throw"></a>
+                <a href="#img1">></a>
+            </div>
+            <a class="cerrar" href="">X</a>
+        </div>
+        <!-- End Lightbox Modals -->
 
         <div class="contenedorProductosSugeridos">
             <h3>Also you may buy</h3>
